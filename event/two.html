@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="contaner">prathanesh</p>
+</body>
+<script>
+   document.addEventListener('click', function(event) {
+  const clientX = event.clientX; // X-coordinate relative to the viewport
+  const clientY = event.clientY; // Y-coordinate relative to the viewport
+  const screenX = event.screenX; // X-coordinate relative to the screen
+  const screenY = event.screenY; // Y-coordinate relative to the screen
+  const pageX = event.pageX;     // X-coordinate relative to the entire document (including scroll)
+  const pageY = event.pageY;     // Y-coordinate relative to the entire document (including scroll)
+
+  console.log(`Client Coordinates: X=${clientX}, Y=${clientY}`);
+  console.log(`Screen Coordinates: X=${screenX}, Y=${screenY}`);
+  console.log(`Page Coordinates: X=${pageX}, Y=${pageY}`);
+     document.querySelector('.contaner').innerHTML = `Client Coordinates: X=${clientX}, Y=${clientY} <br> Screen Coordinates: X=${screenX}, Y=${screenY} <br> Page Coordinates: X=${pageX}, Y=${pageY}`;
+    
+});
+    
+</script>
+</html>
